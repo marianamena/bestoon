@@ -9,6 +9,9 @@ class Expense(models.Model):
 	date = models.DateTimeField()
 	amount = models.BigIntegerField()
 	user = models.ForeignKey(User)
+	def __unicode__(self):
+		return self.text
+	
 
 class income(models.Model):
         text = models.CharField(max_length=255)
